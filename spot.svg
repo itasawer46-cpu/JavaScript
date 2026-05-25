@@ -1,0 +1,14 @@
+<svg width="250" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green Circle -->
+  <circle cx="40" cy="40" r="35" fill="green"/>
+
+  <!-- Sound Waves -->
+  <path d="M20 35 Q40 25 60 35" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M22 45 Q40 35 58 45" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M25 55 Q40 45 55 55" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="90" y="50" font-size="24" font-weight="bolder" font-family="Arial, sans-serif" fill="white">
+    Spotify
+  </text>
+</svg>

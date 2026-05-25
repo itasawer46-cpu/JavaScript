@@ -1,0 +1,49 @@
+/* body{
+    margin:0;
+    padding:0;
+}
+p{
+    color:red;
+    margin:10px;
+    padding:10px;
+}
+.unorderlist li:nth-child(n){
+    color:orange;
+    font-size:25px;
+}
+.required::after{
+content: "*";
+color:red;
+}
+.lorem::first-letter{
+    color:purple;
+    background-color: white;
+    font-size:4rem;
+}
+.lorem::first-line{
+    color:pink;
+    background-color: brown;
+    font-size: 2rem;
+}
+/* .unorderlist li:last-child{
+    color:pint;
+    font-size:50px;
+    list-style:none;
+} */ 
+ .outercir{
+    height:350px;
+    width: 300px;
+    background-color: red;
+ }
+ .innercir{
+    height:200px;
+    width:200px;
+    background-color: blue;
+    font-size: 4rem;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: scaleX(0.5) scaleY(2); */
+    transform: translate(50%,50%);
+ }

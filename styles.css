@@ -1,0 +1,1901 @@
+/* #box {
+   height:250px;
+   width:150px;
+   border-radius:10px;
+   text-align: center;
+   background-color: orange;
+   color:white;
+   border: 1px solid black;
+} */
+/* .content{
+    color:red;
+ } */
+/* div{
+ height: 100px;
+ width:100px;
+ color:white;
+ background-color: dodgerblue;
+ text-align: center;
+  /* } */
+/* *{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: #548687;
+   text-align: center;
+}
+.container{
+   height: 70vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.game{
+   height:60vmin;
+   width:60vmin;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 1.5vmin;
+}
+.box{
+   height: 18vmin;
+   width:18vmin;
+   border-radius: 1rem;
+   border: none;
+   box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+   font-size: 8vmin;
+  color: orange;
+  background-color: #ffffc7;
+}
+#reset-btn{
+   background-color: #191913;
+   padding:1rem;
+   font-size: 1.25rem;
+   color:white;
+   border-radius: 1rem;
+   border: none;
+} 
+#new-btn{
+     background-color: #191913;
+   padding:1rem;
+   font-size: 1.25rem;
+   color:white;
+   border-radius: 1rem;
+   border: none;
+}
+#msg{
+   color:white;
+   font-size: 5vmin;
+}
+.msg-container{
+   margin-bottom: 20px;
+}
+.hide{
+   display: none;
+} */
+/*================================================*/
+/* #txt{
+   height:50px;
+   width: 200px;
+   background-color: black;
+   color:white;
+   border-radius: 5px;
+   border: 2px solid orange;
+}
+#add{
+   margin-top: 5px;
+   background-color: black;
+   color:white;
+   border-radius: 4px;
+}
+#list{
+   color:chartreuse;
+   font-size: 20px;
+}
+#list:hover{
+   color:blue;
+} */
+/*================================================================*/
+/* *{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   text-align: center;
+ }
+ h1{
+   background-color: #081b31;
+   color:white;
+   height: 5rem;
+   line-height: 5rem;
+ }
+ .choice{
+   height: 165px;
+   width:165px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .choice:hover{
+   cursor: pointer;
+   transform: scale(0.9);
+   background-color: #081b31;
+ }
+ img{
+    height: 150px;
+   width:150px;
+   object-fit: cover;
+   border-radius: 50%;
+ }
+ .choices{
+   display: flex;
+   justify-content: center;
+   gap: 3rem;
+   margin-top: 5rem;
+ }
+ .score-board{
+   display: flex;
+   justify-content: center;
+ }
+ .score{
+  padding: 30px;
+  font-size: 30px;
+ }
+ .msg-container{
+   margin-top: 2rem;
+ }
+ #msg{
+   background-color: black;
+   color:white;
+   font-size:20px;
+   font-weight: bold;
+   display: inline;
+  padding: 0.5rem;
+  border-radius: 3px;
+ }
+ #user-score,#comp-score{
+   font-size: 4rem;
+ } */
+
+/* =====================================================*/
+
+/* body{
+      margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: wheat;
+   }
+  .slider-container{
+   position: relative;
+ height: 300px;
+ width: 500px;
+ overflow: hidden;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  .image-container{
+   display:flex;
+   transition: transform .4s ease-in-out;
+  }
+  .img{
+   height:300px;
+   width: 500px;
+  }
+  .btn{
+   position: absolute;
+   top:50%;
+   font-size: 15px;
+   opacity: .5;
+  }
+  .btn.pre{
+   left: 10px;
+  }
+  .btn.next{
+   right:10px;
+  }
+  .btn:hover{
+   color:white;
+   background-color: blue;
+   opacity: 1;
+   cursor: pointer;
+  } */
+/* =========================================== */
+/* *{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+  }
+  body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 175px;
+  }
+  .input{
+   height: 40px;
+  width: 300px;
+  border:none;
+  background-color: transparent;
+  outline: none;
+  font-size: 15px;
+  letter-spacing: 4px;
+  }
+  .input::placeholder{
+   letter-spacing: 0px;
+   font-size:15px;
+  }
+  .password-container{
+   background-color: pink;
+   height: 150px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.3);
+  padding: 20px;
+  }
+  .generate{
+  padding: 5px;
+  height: 30px;
+  width: 90px;
+  margin-top: 5px;
+  background-color: black;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  }
+  .generate:hover{
+   background-color: rgba(0,150,0,0.9);
+   color:white;
+  }
+  .generate:active{
+     transform: scale(0.9);
+  }
+  .inputtype{
+   border:2px solid black;
+   padding : 5px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+  .fa-copy{
+   cursor:pointer;
+   opacity: 0.3;
+   transition: 0.3s;
+  }
+  .fa-copy:hover{
+   opacity:0.8;
+  }
+.alert-container{
+   position: fixed;
+   width:300px;
+   height: 50px;
+   background-color: lightgreen;
+   right:20px;
+   bottom:20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,.3);
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+   font-size:20px;
+} */
+/*======================================================*/
+
+/* *{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+ }
+body{
+   background-color: orange;
+   max-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+   border:1px solid black;
+   height:300px;
+   width:300px;
+} */
+/* ======================================== */
+/* body{
+margin:0px;
+padding:0px;
+font-family: sans-serif;
+}
+
+.background-video{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   object-fit: cover;
+   z-index:-1;
+   filter:brightness(70%);
+}
+h1{
+   color:white;
+letter-spacing: 0.211em;
+line-height: 1;
+font-size: 37px;
+}
+header{
+   min-height: 100vh;
+   display:grid;
+   place-items: center;
+}
+.btn{
+   font-size:30px;
+}
+
+.preloader{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background: white;
+display:grid;
+justify-content: center;
+align-items: center;
+z-index: 1;
+transition: 0.3s linear;
+} */
+
+/* ======================================== */
+/* body{
+   margin: 0;
+   padding:0;
+   font-family: sans-serif;
+}
+
+.bg-img{
+   width: 100%;
+   height:100vh;
+   background: url("https://plus.unsplash.com/premium_photo-1711434824963-ca894373272e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlfGVufDB8fDB8fHww");
+   background-position: center;
+   background-attachment: fixed;
+   background-size:100%;
+}
+.container{
+   padding:100px;
+
+}
+@media(max-width:500px){
+   .container{
+      padding: 10px;
+   }
+} */
+/* 
+============================================== */
+
+/* Digital Clock */
+
+/* *{
+   margin:0;
+   padding: 0;
+   font-family: sans-serif;
+}
+
+body{
+   height: 100vh;
+   background-color: orange;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+img{
+   border-top-left-radius:10px;
+   border-top-right-radius:10px;
+   position: absolute;
+   left:50%;
+   transform: translateX(-50%);
+   width:70px;
+   top:60px;
+   z-index:2;
+}
+.clock{
+   position: relative;
+   background-color: lightgray;
+   height:350px;
+   width:350px;
+   border-radius: 50%;
+   border:5px solid darkgray;
+   box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+}
+.numbers div{
+   z-index: 2;
+   position: absolute;
+   font-size: 27px;
+   font-weight: bold;
+   color:lightgoldenrodyellow;
+   text-shadow: 1px 1px 2px rgba(0,0,0,.7);
+}
+.twelve{
+   top:6px;
+   left:50%;
+   transform: translateX(-50%);
+}
+.three{
+   right:6px;
+   top:50%;
+   transform: translateY(-50%);
+}
+.six{
+   bottom:6px;
+   left:50%;
+   transform: translateX(-50%);
+}
+.nine{
+   left:6px;
+   top:50%;
+   transform: translateY(-50%);
+}
+.arrows{
+display: flex;
+width:100%;
+height:100%;
+justify-content: center;
+align-items: center;
+}
+.arrows::before{
+   content: "";
+   width: 25px;
+   height:25px;
+   background-color: darkgreen;
+   border-radius: 50%;
+   box-shadow: 1px 1px 2px rgba(0,0,0,.7);
+   z-index:4;
+}
+.arrows div{
+   background-color: white;
+   width:7px;
+   position:absolute;
+   height:120px;
+   transform-origin: bottom center;
+   bottom:50%;
+   z-index:3;
+   border-radius: 50% 50% 0 0;
+   box-shadow: 1px 1px 2px rgba(0,0,0,.7);
+}
+.arrows .hour{
+   height:80px;
+}
+.arrows .second{
+   transform: rotate(250deg);
+   transform: tranform 0.3s linear;
+   background-color: goldenrod; 
+} */
+/* ============================================== */
+/* body{
+   margin: 0;
+   padding:0;
+}
+.image{
+   height:100vh;
+   width: 100vw;
+   object-fit: cover;
+   flex-shrink: 0;
+}
+.slider{
+   width:100%;
+   height:100vh;
+   overflow: hidden;
+   position: relative;
+}
+.image-container{
+   display:flex;
+   width:400%;
+   transition: transform 0.5s ease;
+}
+button{
+   position: absolute;
+   top:50%;
+   transform: translateY(-50%);
+   font-size: 20px;
+   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+   background-color: lightblue;
+   border:none;
+   border-radius: 50%;
+   padding:12px;
+   cursor: pointer;
+   opacity:0.7;
+   transition: all 0.3s ease;
+}
+button:hover{
+   opacity: 1;
+   background-color: black;
+   color:white;
+}
+button:active{
+transform: translateY(-50%)
+scale(0.8);
+}
+#preview{
+   left:10px;
+}
+#next{
+   right:10px;
+} */
+/* 
+body{
+margin:0;
+padding:0;
+height:100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: lightgreen;
+font-family: sans-serif;
+}
+
+.btn{
+   background-color: blue;
+   text-decoration: none;
+   color:white;
+   padding:20px 20px;
+   border-radius: 5px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+   position: relative;
+   overflow: hidden;
+}
+.btn::before{
+   content: "";
+   position: absolute;
+   background-color: red;
+   border-radius:50%;
+   width:0px;
+   height: 0px;
+   left:50%;
+   top:50%;
+   transform: translate(-50% , -50%);
+   transition: width .5s,height .5s;
+}
+.btn span{
+   position: relative;
+   z-index: 1;
+}
+.btn:hover::before{
+   width:300px;
+   height: 300px;
+} */
+
+/* ================================================ */
+
+/* body{
+   margin:0
+
+ }
+ .container{
+   height:100vh;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: url("https://images.unsplash.com/photo-1716681863589-d461817a3ec9?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-size: cover;
+ }
+ h1{
+   font-size: 60px;
+   color:white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   letter-spacing: 4px;
+   text-shadow: 2px 2px 4px rgba(0,0,0,.3);
+ }
+ .btn{
+   padding: 10px 20px;
+   width: 200px;
+   background-color: orangered;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size:20px;
+   border:none;
+ }
+ .btn:hover{
+filter: brightness(0.8);
+ }
+ .btn:active{
+   transform: scale(0.8);
+   transition: all 0.5s ease;
+ }
+
+ .active.container{
+   filter:blur(5px) brightness(.7);
+ }
+
+ .popup-container{
+   position: fixed;
+   height:200px;
+   width:400px;
+   left:50%;
+   top:30%;
+   transform: translateX(-50%);
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   padding : 20px;
+   background: url("https://images.unsplash.com/photo-1676825666641-d5a916a00f5b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-size: cover;
+   border-radius: 10px;
+   box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+   opacity: 1;
+   transition: all .7s ease;
+ }
+h4{
+   font-size: 30px;
+   margin:10px 0;
+   color:white;
+   font-family: sans-serif;
+ }
+label{
+   color:cornsilk;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.popup-btn{
+background-color: orangered;
+padding: 10px;
+cursor: pointer;
+font-size: 20px;
+border-radius: 5px;
+}
+.input{
+   padding:10px;
+   font-size: 20px;
+   text-align: center;
+   margin:10px 0;
+}
+.popup-btn:active{
+   transform: scale(0.8);
+   transition: all 0.7s ease;
+}
+.input::placeholder{
+   color:lightgray;
+}
+.close-icon{
+   position: absolute;
+   top:10px;
+   right:10px;
+   cursor:pointer;
+}
+.close-icon:hover{
+   color:red;
+}
+.active.popup-container{
+   visibility: hidden;
+   opacity: 0;
+   top:10%;
+} */
+/* ================================================== */
+
+/* NAVBAR */
+
+/* Darker Gym Website  */
+
+/* *{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: cursive;
+}
+#navbar{
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 15px 30px;
+   border:none;
+   background-color: black;
+   width:100vw;
+   transition: all 0.3s ease;
+}
+#navbar:hover{
+   background-color: rgb(92, 11, 11);
+}
+#order-list{
+list-style: none;
+display:flex;
+margin-left: 200px;
+}
+#order-list li{
+   margin-left: 30px;
+   transition:all 0.5 ease;
+}
+#order-list li:hover{
+   transform: scale(0.9);
+   cursor: pointer;
+   outline: 2px solid white;
+   outline-offset: 10px;
+   border-radius: 5px;
+}
+#order-list a{
+   text-decoration: none;
+   color:aliceblue;
+   font-size:17px;
+   font-weight: 600;
+   transition: all 0.3s ease;
+}
+#order-list a:hover{
+   color:rgb(255, 85, 0);
+}
+.logo{
+   font-size: 20px;
+   color:aliceblue;
+   font-weight: 700;
+   letter-spacing: .1rem;
+   font-family: cursive;
+}
+.logo:hover{
+   cursor: pointer;
+   color:aqua;
+}
+#icon label{
+   font-size:18px;
+   color:white;
+   margin-right: 10px;
+}
+#icon input{
+   padding:10px;
+   border-radius: 10px;
+   border:none;
+   font-size: 12px;
+}
+#icon input:active{
+   border:none;
+}
+#image1{
+   height:100vh;
+   background-size:cover;
+   background-repeat: no-repeat;
+   width: 100%;
+   object-fit: cover;
+   filter: brightness(50%);
+}
+
+#box1{
+position: relative;
+}
+#box2{
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   color:white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 10px;
+
+}
+.btn{
+   padding:10px;
+   color:white;
+   background-color: black;
+   width: 150px;
+   border: none;
+   border-radius: 2px solid gray;
+}
+#box2 p{
+   font-size: 1rem;
+   letter-spacing: 2px;
+   line-height:20px;
+}
+#image2{
+   border-radius: 10px;
+   background-color:black;
+}
+.box2{
+   margin-bottom: 20px;
+}
+.btn{
+   font-size: 17px;
+   font-weight: bold;
+   border-radius:5px;
+   transition: all 0.5s ease;
+}
+.btn:hover{
+   color: red;
+   background-color: white;
+} */
+/* #order-list{
+   display: block;
+} */
+/* *{
+   padding:0;
+   margin:0;
+   box-sizing: border-box;
+} */
+
+/* =============================================== */
+
+/* TABLES LISTS IMAGE BY HARRY */
+/* #image{
+   height:300px;
+   background-size: cover;
+   background-repeat: no-repeat;
+} */
+
+/* #table{
+   border:1px solid orange;
+}
+td{
+   border:2px solid black;
+} */
+/* 
+===============================================================================
+
+            PRACTICE FORM OF STUDENT DETAILS */
+
+/* * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: rgba(79, 119, 194,0.4);
+}
+
+#box1 {
+   border: 2px solid rebeccapurple;
+   height: 500px;
+   width: 550px;
+   padding: 20px;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   background-color: rgba(98, 226, 226,1);
+   border: none;
+   box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+}
+#form h2{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color:white
+}
+
+#form {
+   padding: 20px;
+}
+
+.same-class{
+   margin-bottom: 30px;
+}
+#div6{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+input,select{
+   padding: 5px;
+   font-size: 16px;
+   border-radius: 5px;
+   box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+}
+label{
+   font-size: 16x;
+}
+input{
+   margin-left: 30px;
+}
+select{
+   margin-left: 60px;
+} */
+
+/* ========================================================
+           
+             Quiz From Harry Bai Having 6 videos */
+
+/* *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+#unorder-list{
+   display: flex;
+   list-style: none;
+}
+#unorder-list a{
+   text-decoration: none;
+   padding-left: 20px;
+}
+#navbtn{
+   margin-right: 20px;
+   background-color:blue;
+   color:white;
+   padding:5px;
+   border-radius: 2px;
+}
+header{
+   position: sticky;
+}
+#navbar{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgb(160, 151, 151);
+   border-radius: 3px;
+   height:50px;
+   width:100%;
+}
+.videobox{
+   display: flex;
+}
+.video{
+   height: 300px;
+   width: 350px;
+   margin-left: 20px;
+   border-radius: 10px;
+   box-shadow: 2px 4px 4px rgba(0,0,0,0.4);
+} */
+/* div p:first-child{
+   color:red;
+   background-color: white;
+}
+
+div > p{
+   color:white;
+   background-color: black;
+} */
+
+/* Video Number 22 of Harry Bai */
+
+/* html{
+   font-size: 12px;
+ }
+ *{
+   margin: 0;
+   padding: 0;
+ }
+.box{
+   border:2px solid red;
+   width:80vw;
+   margin: auto;
+   background-color: aquamarine;
+   height:10vh;
+}
+.container{
+   border:2px solid red;
+   margin: 25px auto;
+   background-color: aquamarine;
+   min-height: 80vmin;
+   font-size: 16px;
+   max-width: 90vw;
+   width: 80vw;
+}
+.container p{
+   font-size: 2rem;
+   border:2px solid purple;
+   margin:10px 10px;
+}
+.mycont{
+   background-color: rebeccapurple;
+   color:white;
+   width: 100vmin;
+} */
+
+/* video Number 23 from Harry Bai */
+
+/* *{
+   margin: 0;
+   padding: 0;
+}
+.box1,.box2{
+border:2px solid red;
+display:inline-block;
+padding: 45px 45px;
+margin: 20px;
+}
+.box1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} */
+
+/* Video Number 24 of Harry Bai  */
+/* 
+ .box{
+   border:2px solid red;
+   height:200px;
+   width:200px;
+   color:white;
+   background-color: purple;
+   box-shadow: 8px 8px 8px rgba(0,0,0,0.8);
+ }
+ .para{
+   text-shadow: 8px 8px 8px rgba(0,0,0,0.8);
+ } */
+
+/* video Number 25 of About Outline and list-item */
+
+/* nav ul li{
+   list-style: devanagari;
+   list-style-type:circle;
+   background-color: yellow;
+   list-style-position:inside;
+   border:2px solid red;
+   list-style-image: url("wp5544627.jpg");
+   background-size: cover;
+   object-fit: cover;
+   height: 200px;
+   width:200px;
+
+   list-style: none;
+   padding: 5px 20px;
+}
+ul{
+   display: flex;
+} */
+
+/* video Number 26 of Harry Bai */
+
+/* .box{
+   width:30vw;
+   height:30vh;
+   border:2px solid red;
+   overflow:auto;
+   overflow-x: hidden;
+   overflow-y: scroll;
+} 
+p{
+   background-color: blue;
+   color:white;
+ }
+ div p:nth-child(3){
+   background-color: yellow;
+   color:red;
+ } */
+
+/* Video Number 29 position property in CSS  */
+
+/* *{
+   margin: 0;
+   padding: 0;
+  }
+.box{
+
+   transform, filter or perspective can also make an element appear as positioned
+
+   height:150px;
+   width:200px;
+   border:2px solid red;
+   padding: 3px;
+   margin: 3px;
+   color:white;
+}
+.box1{
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   top:0px;
+   background-color: aqua;
+}
+.box2{
+   background-color: blue;
+   position: fixed;
+  bottom: 0px;
+  left: 20vw;
+}
+.box3{
+   position: sticky;
+   top:20px;
+   left:50%;
+   bottom:0px;
+   background-color: purple;
+}
+.box4{
+   background-color: slategrey;
+}
+.parent{
+   padding:43px;
+   margin:34px;
+   border:3px solid green;
+   position: sticky;
+   transform: translate(0);
+   filter:invert(0);
+}
+*/
+
+/* Challange Accepted from Harry Bai Video Number 29 */
+
+/* * {
+   margin: 0;
+   padding: 0;
+}
+.box1{
+   height: 550px;
+   width: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: gray;
+}
+body {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:black;
+}
+.box2 {
+   border-radius:10px;
+   height: 525px;
+   width: 350px;
+   background-color:white;
+}
+
+.img {
+   height: 200px;
+   width: 340px;
+   background-size: cover;
+   object-fit: cover;
+   background-repeat: no-repeat;
+   padding:5px;
+   border-radius: 10px;
+}
+.btn1{
+   background-color: rgb(247, 241, 241);
+   color:black;
+   border-radius: 10px;
+   border:none;
+   padding:10px;
+   margin:5px 10px;
+   width: 70px;
+   transition: all 0.3s ease;
+}
+.btn1:hover{
+   background-color: rgb(61, 61, 176);
+   color:white;
+}
+.h2{
+   margin-bottom: 10px;
+}
+.main-content{
+   padding:10px;
+}
+.main-content p{
+   font-size: 14px;
+}
+.btn2{
+   display: flex;
+   justify-content: center;
+}
+.btn2 button{
+   padding:10px;
+   border-radius: 10px;
+   background-color: rgb(43, 30, 186);
+   color:white;
+   margin-top: 10px;
+   transition: all 0.3s ease;
+}
+.btn2 button:hover{
+   background-color: red;
+   color:black;
+} */
+/* 
+Video Number 30 from Harry bai "VARIABLES  IN CSS "*/
+
+/* :root{
+Its is decelartion of variable
+
+   --color:purple;
+   --seccolor:rgb(232, 44, 44);
+   --anothercolor:rgb(128, 0, 0);
+   --fontsize:23px;
+ }
+*{
+   margin: 0;
+   padding: 0;
+}
+ul{
+   display: flex;
+}
+ul li:first-child{
+   --color:rgb(26, 227, 83);
+   background-color: var(--color);
+}
+ul li:last-child{
+   font-size: var(--fontsize);
+   --color:rgb(141, 233, 12);
+   background-color: var(--color,pink);
+}
+ul li{
+   list-style: none;
+   padding:20px;
+}
+#nav{
+   border:5px solid var(--anothercolor);
+   background-color: var(--color);
+}
+.container{
+   background-color: var(--seccolor);
+   
+} */
+/* body{
+   background-color: purple;
+   color:white;
+}
+.box{
+   width:344px;
+   height:344px;
+   background-color: steelblue;
+   padding:3px;
+   margin:5px;
+}
+.boxes{
+   display: flex;
+}
+@media (min-width:700px){
+   body{
+      background-color: red;
+      color:black;
+   }
+   .boxes{
+      display: flex;
+      flex-direction: column;
+   }
+} */
+
+/* Video Number 33 of Harry Bai Challange Accepted of Multicolor Navbar */
+
+/* :root {
+   --navcolor: rgb(53, 53, 237);
+   --navelementcolor: white;
+   --navelementbackgroundcolor: rgb(214, 67, 67);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: cursive;
+}
+
+#unorder-list li {
+   list-style: none;
+   padding: 20px;
+   color: var(--navelementcolor);
+}
+
+#unorder-list li:nth-child(2) {
+   background-color: var(--navelementbackgroundcolor);
+}
+
+#unorder-list li:last-child {
+   background-color:var(--navelementbackgroundcolor) 
+}
+
+#unorder-list {
+   display: flex;
+}
+
+#nav {
+   width: 100vw;
+   height: auto;
+   background-color: var(--navcolor);
+} */
+/* .boxes div:nth-child(odd){
+   background-color: pink;
+} */
+/* .box:first-child{
+   background-color: purple;
+   color:white;
+} */
+/* .boxes:first-child{
+   background-color: blue;
+} */
+
+/* Video Number 32 Of Harry Bai */
+
+/* .boxes .box:first-child::first-line{
+   background-color: cadetblue;
+}
+.boxes .box:first-child::first-letter{
+   color:brown;
+   font-size: 45px;
+   background-color: cadetblue;
+}
+[husnain="true"]{
+   background-color: red;
+   color:white;
+   margin-top: 20px;
+   padding:10px;
+}
+.box:nth-last-child(1){
+   background-color: cadetblue;
+}
+::selection{
+   color:white;
+   background-color: aqua;
+}
+
+input::placeholder{
+   color:blue;
+   font-weight: 600;
+   font-size:14px;
+} */
+
+/* Challange Accepted From Harry bai Video Number 32
+
+ *{
+   margin: 0;
+   padding: 0;
+   font-family: cursive;
+}
+body{
+   background-color: rgb(243, 251, 251);
+}
+#nav{
+   width:100vw;
+   background-color: blue;
+   padding: 10px;
+   position: relative;
+}
+#span{
+   position: absolute;
+   right:10px;
+   margin-top:10px;
+}
+label{
+   margin-right: 10px;
+   font-size: 18px;
+   color:white;
+   font-weight: 600;
+}
+input{
+   padding:5px;
+}
+#unorder-list{
+   display:flex;
+}
+#unorder-list li{
+   list-style: none;
+   padding:10px 20px;
+   font-weight: 600;
+}
+#unorder-list li a{
+   text-decoration: none;
+   color:white;
+}
+
+#main{
+   height: 80vh;
+   background-color: rgb(41, 41, 215);
+   margin: 20px;
+   padding: 10px;
+   display:flex;
+   position: relative;
+}
+
+.box1{
+height:60vh;
+width: 40vw;
+margin:20px;
+background-color: rgb(219, 21, 219);
+border-radius: 10px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+text-transform: uppercase;
+color:white;
+font-weight: 600;
+}
+.box2{
+position: absolute;
+right:10px;
+height:60vh;
+width: 40vw;
+margin:20px;
+background-color: rgb(219, 21, 219);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-transform: uppercase;
+color:white;
+font-weight: 600;
+}
+
+.para{
+   width: 80vw;
+   padding:20px;
+   border-radius: 30px;
+   margin: 0px 10vw;
+   background-color: rgb(219, 21, 219);
+   color:white;
+   font-weight: 600;
+}
+#footer{
+   width:100vw;
+   height:50px;
+   border:2px solid red;
+   margin: 20px 0px 0px 0px;
+   background-color: crimson;
+}  */
+/* Video Number 38 More on flexbox  */
+
+/* .container{
+   border:2px solid black;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height:80vh;
+   gap:10px;
+
+}
+.items{
+   flex-grow: 1;
+   height:30px;
+   width:30px;
+   border:2px solid black;
+   background-color: blueviolet;
+    margin: 4px;
+}
+#item1{
+   flex-grow: 2;
+} */
+/* .container{
+   border:2px solid red;
+   display: grid;
+   grid-template-columns: 120px 100px;
+   grid-template-rows: 100px 100px 100px;
+ }
+ .items{
+   border:2px solid black;
+   height: 55px;
+   width:55px;
+ }
+ .item4{
+   grid-row: 2;
+   grid-column: 3;
+ }
+ .item1{
+   grid-row: 9;
+   grid-column: 8;
+ } */
+
+/* GRIDS IN CSS BY HARRY BAI */
+
+
+/* .container{
+   width:70vw;
+   height:500px;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3,1fr); 
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 100px 1fr 100px;
+   gap:10px 5px;
+   background-color:chartreuse;
+ }
+.items{
+   background-color: blue;
+   color:white;
+}
+.item1{
+   grid-column-start: 1;
+   grid-column-end: 4;
+
+}
+.item2,.item3,.item4{
+   height: 77px;
+   width:77px;
+   place-self: center;
+}
+.item2{
+   justify-self: center;
+   align-self: center;
+    place-self: center;
+}
+.item5{
+   grid-column-start: 1;
+   grid-column-end: 4;
+}
+.item2{
+   color:white;
+} */
+
+/* Navbar of UltraEdit Challange Accepted from Harry Bai */
+/* *{
+   margin: 0;
+   padding: 0;
+   font-family: cursive;
+}
+.logo img{
+   height:70px;
+}
+.logo img:hover{
+    outline:2px solid black;
+   outline-offset: 5px; 
+}
+header{
+     position:sticky;
+   top:0;
+} 
+nav{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100vw;
+   background-color: antiquewhite;
+   
+}
+ul{
+   display:flex;
+   gap:35px;
+}
+ul li{
+   list-style: none;
+}
+nav ul li:hover{
+   outline:2px solid black;
+   outline-offset: 10px;
+}
+ul li::after{
+   content: "🢓";
+   font-size:20px;
+   padding:5px;
+}
+.hero{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 40px 0px;
+}
+.hero#hero-para{
+   text-align: center;
+}
+.hero h1,h3,#hero-btn{
+   padding:20px;
+}
+.hero h1{
+   font-weight: 400;
+}
+.hero h3{
+   font-weight: 400;
+}
+.hero button{
+   background-color: rgb(59, 212, 212);
+   padding:10px;
+   border-radius: 5px;
+   border: none;
+   color:white;
+   font-weight: 600;
+}
+.sub-hero{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   padding:20px;
+}
+.sub-hero img,p{
+padding: 10px;
+}
+.parent-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.child-container{
+   width:70vw;
+   height: 80vh;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap:20px;
+}
+.element{
+height:133px;
+width:250px;
+padding:10px;
+background-color: aliceblue;
+  border-radius: 10px;
+  text-align: center;
+}
+.button{
+   display: flex;
+}
+.first-btn{
+   background-color: blue;
+   color:white;
+margin: 85px 5px 0px 0px;
+  border-radius: 10px;
+  padding: 3px;
+
+}
+.second-btn{
+   background-color: brown;
+   margin: 30px 5px 0px 0px;
+   color:white;
+   margin: 85px 5px 0px 0px;
+  border-radius: 10px;
+  padding: 3px;
+}  */
+/* video number 43 about transform property */
+
+ /* .container{
+   margin: 40px;
+   border:2px solid red;
+   width:70vw;
+   height:70vh;
+   padding:30px;
+}
+.box{
+   height:100px;
+   width:100px;
+   background-color: orange;
+   color:white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform:rotate(45deg);
+   transform-origin: 0% 0%;
+
+   transform: scale(300%);
+} */
+
+
+/* Transition  From Harry Bai */
+/* 
+.container {
+   width: 70vw;
+   height: 400px;
+   background-color: cadetblue;
+}
+
+.box {
+   height: 100px;
+   width: 100px;
+   background-color: purple;
+   transition-property: scale();
+   transition-duration: 2s;
+   transition-timing-function: ease;
+   transition-delay: 1s;
+}
+
+.box:hover {
+   background-color: aqua;
+   transform: translate(80px, 80px);
+} */
+/* .container {
+   width: 70vw;
+   height: 400px;
+   background-color: cadetblue;
+} */
+
+/* @keyframes animate{
+   from{
+      transform: translate(0,0);
+   }
+   to{
+      transform: translate(200px,200px) scale(2);
+      background-color: pink;
+   }
+}
+.box {
+   height: 100px;
+   width: 100px;
+   background-color: purple;
+   animation: animate 4s ease 2s;
+   animation-iteration-count: 4;
+   animation-direction: alternate-reverse;
+   animation-fill-mode: forwards;
+} */
+
+/* Round Border Animation In CSS */
+
+/* @keyframes Husnain {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.box {
+   height: 100px;
+   width: 100px;
+   background-color: purple;
+   border:5px solid green;
+   border-top:5px solid blue;
+   border-radius: 50%;
+   animation: Husnain 1s ease 0s infinite ;
+} */
+
+/* Challange Accepted From Harry Bai */
+
+ /* @keyframes BouncingballX{
+from{
+   left:0;
+}
+to{
+   left:100%;
+}
+ }
+@keyframes BouncingballY{
+from{
+   bottom:0;
+}
+to{
+bottom:100%;
+}
+ }
+.container {
+   width: 80vw;
+   height: 400px;
+   background-color: cadetblue;
+   position: relative;
+}
+.box {
+   height: 100px;
+   width: 100px;
+   background-color: purple;
+   border-radius: 50%;
+   position: absolute;
+   bottom: 0px;
+   animation: BouncingballY 3s linear infinite alternate,BouncingballX 3s ease-in-out infinite;
+}  */
+/* 
+*{
+   margin: 0;
+   padding: 0;
+   font-family: cursive;
+}
+body{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.container{
+   background-color: aqua;
+   border-radius: 10px;
+   border:2px solid red;
+   height:250px;
+   width:300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap:20px;
+   padding:20px;
+}
+.container #pass{
+   width:200px;
+   padding:10px;
+   border-radius: 10px;
+}
+input::placeholder{
+   font-size: 14px;
+   color:blue;
+}
+#btn{
+   padding:5px;
+   color:blue;
+   border-radius: 5px;
+   
+} */
+
+/* .childern{
+   background-color: lightblue;
+   border:2px solid black;
+   padding: 34px;
+   margin: 34px;
+}
+
+.child{
+   background-color: yellow;
+   border:2px solid black;
+   padding: 34px;
+   margin: 34px;
+}
+.container{
+   background-color:red;
+   border:2px solid black;
+   padding: 34px;
+   margin: 34px;
+} */
+/* 
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: rgb(159, 14, 159);
+
+}
+.container{
+   background-color: white;
+   padding:2rem;
+   border-radius: 5px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+.amount{
+   display: flex;
+   flex-direction: column;
+   margin: 20px 0px 30px 0px;
+}
+.amount input{
+   padding:10px;
+   border-radius: 5px;
+   border:2px solid lightgray
+}
+.amount input:focus{
+   outline: none;
+}
+.child-container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.select-container{
+   display: flex;
+   align-items: center;
+   gap:5px;
+}
+.select-container img{
+height:40px;
+}
+i{
+   font-size: 22px;
+}
+button{
+   width: 100%;
+  padding: 10px;
+  margin: 30px 0px 10px 0px;
+  background-color: lightseagreen;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+}
+.msg{
+   margin: 20px 0px 0px 0px;
+} */
+/* *{
+   margin: 0;
+   padding: 0;
+}
+body{
+display: flex;
+   justify-content: center;
+   align-items: center;
+   height:100vh;
+   background-color: blueviolet;
+}
+.container{
+   display: flex;
+   flex-direction: column;
+   gap:20px;
+   padding:20px;
+   background-color:white;
+   border-radius: 5px;
+} */

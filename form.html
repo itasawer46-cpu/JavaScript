@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="container">
+    <label for="email">
+        Email
+        <div>
+            <input type="email" id="email" placeholder="Enter e-mail">
+        </div>
+    </label>
+    <label for="password">
+        Password
+        <div class="password_div">
+<input type="password" id="password" class="password_value same" placeholder="Password">
+<img src="eye.svg" alt="" class="eye">
+<img src="hide.svg" alt="" class="hide_eye">
+</div>
+    </label>
+    <label for="confirm">
+        Confirm
+       <div class="password_div"> 
+    <input type="password" id="confirm_password" class="password_value same" placeholder="Confirm-Password">
+    <img src="eye.svg" alt="" class="eye1">
+<img src="hide.svg" alt="" class="hide_eye2">
+    </div>
+    </label>
+    <div id="msg">
+        
+    </div>
+    <button class="sign-in">Sign In</button>
+  </div>
+  <script src="form.js"></script>
+</body>
+</html>

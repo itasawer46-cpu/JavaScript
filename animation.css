@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes identifier {
+    from{
+        width:0px;
+        height:0px;
+    }
+    to{
+        width: 100vw;
+        height:100vh;
+        background-color: purple;
+    }
+}
+.container{
+    background-color: red;
+    border:2px solid gray;
+    animation: identifier 2s ease-in infinite reverse forwards;
+    /* animation-fill-mode:forwards;
+    animation-direction:reverse; */
+}

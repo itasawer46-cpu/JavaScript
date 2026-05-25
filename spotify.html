@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="spotifyclone.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="home">
+            <img src="cross.svg" alt="" id="cross">
+                <img src="spot.svg" alt="">
+                <ul class="list">
+                    <li><i class="fa-solid fa-house home-ele"></i>Home</li>
+                    <li><img src="search.svg" alt="search" class="home-ele">search</li>
+                </ul>
+            </div>
+            <div class="library">
+                <div id="copy"><i class="fa-solid fa-copy"></i>Your Library</div>
+                <ul class="song-list">
+                    <li>
+                         <div class="play-section">
+                    <i class="fa-solid fa-music"></i>
+                    <div class="music-info">
+                        <div>Song Name</div>
+                        <div>Song Artist</div>
+                    </div>
+                    <p>Play Now</p>
+                    <img src="play1.svg" alt="play-btn" class="play-btn" width="25">
+                </div>
+                    </li>
+                </ul>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/pk-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/pk-en/safetyandprivacy/">Safety &amp; Privacy Center</a></div>
+                    <div><a href="https://www.spotify.com/pk-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/pk-en/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">About Ads</a></div>
+                    <div><a href="https://www.spotify.com/pk-en/accessibility/">Accessibility</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <div class="nav">
+                    <img src="hamburger1.svg" alt="" id="hamburg">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="btns">
+                    <button id="signup">Sign Up</button>
+                    <button id="login">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyplaylist">
+                <h2 id="spot">Spotify Playlists</h2>
+                <div class="card-container">
+                    <div class="cards" data-folder="ncs">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02c7c2d09c7495ae64abec40ed" alt="image"
+                            class="spotify-image">
+                        <h4>Happy Hits</h4>
+                        <p>Hits to boost your mode and fill you</p>
+                        <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            class="play-icon">
+                            <circle cx="50" cy="50" r="45" fill="#28a745" />
+                            <polygon points="40,30 70,50 40,70" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="cards" data-folder="cs">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02c7c2d09c7495ae64abec40ed" alt="image">
+                        <h4>Happy Hits</h4>
+                        <p>Hits to boost your mode and fill you</p>
+                        <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                            class="play-icon">
+                            <circle cx="50" cy="50" r="45" fill="#28a745" />
+                            <polygon points="40,30 70,50 40,70" fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="abovebar">
+                        <div class="song-info">
+                    </div>
+                    <div class="songbuttons">
+                        <img src="https://ico.hugeicons.com/previous-stroke-standard@2x.webp?v=1.0.2" alt="" width="25"
+                            height="25" id="previous">
+                        <img src="play1.svg" alt="" id="play">
+                        <img src="https://ico.hugeicons.com/next-stroke-standard@2x.webp?v=1.0.2" alt="" width="25"
+                            height="25" id="next">
+                    </div>
+                    <div class="song-time">
+                    </div>
+                </div>
+                <div class="audio">
+                <img src="audio.svg" alt="" width="25">
+                <input type="range" name="volumn" id="range">
+                <p id="para"></p>
+                </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="spotify.js"></script>
+</body>
+
+</html>

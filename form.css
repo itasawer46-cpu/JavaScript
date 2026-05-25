@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(to left,purple,red,blue,green,orange);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    color:white;
+    height: 70vh;
+    box-shadow: 2px 2px 4px rgba(0,0,0,1);
+    width:min(90%,500px);
+    height: auto;
+    padding: 20px;
+    margin: 0px 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    background:linear-gradient(to right,rgb(207, 84, 104),rgb(206, 199, 199));
+}
+input{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.same{
+    outline: none;
+    border:none;
+    background-color: white;
+    width:60%;
+}
+.password_div{
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    width:220px;
+}
+.eye{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    right: 10px;
+}
+.hide_eye{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    right: 10px;
+}
+.sign-in{
+    padding:10px;
+    border-radius: 5px;
+    width: 100px;
+}
+.eye{
+    display: none;
+}
+.eye1{
+ display: none;
+   position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    right: 10px;
+}
+.hide_eye2{
+       position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    right: 10px;
+}
