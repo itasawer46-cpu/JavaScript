@@ -114,6 +114,13 @@ if(e.href.includes("/songs")){
 }
 
 async function main() {
+          document.querySelector("#hamburg").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "0";
+        // document.querySelector(".right").style.filter = "invert(1) brightness(0.5)";
+    })
+    document.querySelector("#cross").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "-100%";
+    })
     songs = await getsongs("songs/cs");
     console.log(songs);
 
@@ -141,13 +148,6 @@ async function main() {
     })
 // currentsong = new Audio();
 // currentsong.src = songs[0];
-    document.querySelector("#hamburg").addEventListener("click", () => {
-        document.querySelector(".left").style.left = "0";
-        // document.querySelector(".right").style.filter = "invert(1) brightness(0.5)";
-    })
-    document.querySelector("#cross").addEventListener("click", () => {
-        document.querySelector(".left").style.left = "-100%";
-    })
 
     document.querySelector("#previous").addEventListener("click", () => {
         
