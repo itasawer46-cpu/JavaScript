@@ -21,8 +21,8 @@ function formatToMinutesSeconds(totalSeconds) {
 
 async function getsongs(folder) {
     currfolder = folder;
-    // GitHub Pages subfolder (/JavaScript/) ke liye sahi path fix kiya
-    let a = await fetch(`/JavaScript/${folder}/`);
+    // Shuru se slash (/) hata diya taake GitHub Pages isko sahi dhoonde
+    let a = await fetch(`${folder}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -31,7 +31,8 @@ async function getsongs(folder) {
     for (let i = 0; i < href.length; i++) {
         const element = href[i];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${folder}/`)[1]);
+            // Yahan se bhi extra slash hatayi taake array sahi bane
+            songs.push(element.href.split(`${folder}/`)[1]);
         }
     }
     
@@ -53,7 +54,7 @@ async function getsongs(folder) {
                     </li>`;
     }
 
-    // Aapka original click logic bina kisi badlav ke
+    // Aapka original burger listener aur clicks
     Array.from(document.querySelector(".song-list").getElementsByTagName("li")).forEach(e => {
         playbtn, e.addEventListener("click", () => {
             let info = e.getElementsByTagName("div")[2].innerHTML;
@@ -65,15 +66,15 @@ async function getsongs(folder) {
 }
 
 function playMusic(song) {
-    // GitHub repository folder ke mutabiq playback path fix kiya
-    currentsong.src = `/JavaScript/${currfolder}/` + song;
+    // Relative path playback ke liye
+    currentsong.src = `${currfolder}/` + song;
     currentsong.play();
     play.src = "pause.svg"
 }
 
 async function displayAlbums() {
-    // Albums fetch karne ke liye sahi GitHub subfolder path
-    let a = await fetch(`/JavaScript/songs/`);
+    // Shuru se slash (/) hataya, taake live link par albums fetch ho sakein
+    let a = await fetch("songs/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -93,11 +94,12 @@ async function displayAlbums() {
             console.log(folder);
             
             try {
-                let a = await fetch(`/JavaScript/songs/${folder}/info.json`);
+                // Relative path info.json ke liye
+                let a = await fetch(`songs/${folder}/info.json`);
                 let response = await a.json();
                 console.log(response);
                 cardcontainer.innerHTML = cardcontainer.innerHTML + ` <div class="cards" data-folder="${folder}">
-                                    <img src="/JavaScript/songs/${folder}/cover.jpg" alt="image"
+                                    <img src="songs/${folder}/cover.jpg" alt="image"
                                         class="spotify-image">
                                     <h4>${response.title}</h4>
                                     <p>${response.description}</p>
@@ -108,14 +110,13 @@ async function displayAlbums() {
                                     </svg>
                                 </div>`
             } catch(err) {
-                console.log("JSON parse or path error: ", err);
+                console.log("Album info error: ", err);
             }
         }
     }
 }
 
 async function main() {
-    // Aapka original hamburger open/close code
     document.querySelector("#hamburg").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0";
     })
@@ -123,7 +124,7 @@ async function main() {
         document.querySelector(".left").style.left = "-100%";
     })
     
-    // Initial folder load path
+    // Sahi absolute folder target bina kisi extra 'JavaScript/' ke
     songs = await getsongs("songs/cs");
     console.log(songs);
 
