@@ -121,7 +121,7 @@ async function main() {
     document.querySelector("#cross").addEventListener("click", () => {
         document.querySelector(".left").style.left = "-100%";
     })
-    songs = await getsongs("songs/cs");
+    songs = await getsongs("JavaScript/songs/cs");
     console.log(songs);
 
  displayAlbums();
