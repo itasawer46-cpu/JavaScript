@@ -125,7 +125,6 @@ async function main() {
     console.log(songs);
 
  displayAlbums();
-
     play.addEventListener("click", () => {
         if (currentsong.paused) {
             currentsong.play();
