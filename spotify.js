@@ -1,4 +1,4 @@
-Console.log("Hello World");
+console.log("Hello World");
 let currentsong = new Audio();
 let playbtn = document.querySelector(".play-btn");
 let play = document.querySelector("#play");
@@ -21,8 +21,8 @@ function formatToMinutesSeconds(totalSeconds) {
 
 async function getsongs(folder) {
     currfolder = folder;
-    // GitHub aur Local dono ke liye relative rasta
-    let a = await fetch(`${folder}/`);
+    // GitHub Pages subfolder (/JavaScript/) ke liye sahi path fix kiya
+    let a = await fetch(`/JavaScript/${folder}/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -53,7 +53,7 @@ async function getsongs(folder) {
                     </li>`;
     }
 
-    // Aapka original click listener jise aap use kar rahe the
+    // Aapka original click logic bina kisi badlav ke
     Array.from(document.querySelector(".song-list").getElementsByTagName("li")).forEach(e => {
         playbtn, e.addEventListener("click", () => {
             let info = e.getElementsByTagName("div")[2].innerHTML;
@@ -65,15 +65,15 @@ async function getsongs(folder) {
 }
 
 function playMusic(song) {
-    // Mobile aur laptop dono par baghair crash chalne wala path
-    currentsong.src = `${currfolder}/` + song;
+    // GitHub repository folder ke mutabiq playback path fix kiya
+    currentsong.src = `/JavaScript/${currfolder}/` + song;
     currentsong.play();
     play.src = "pause.svg"
 }
 
 async function displayAlbums() {
-    // Local IP hatakar relative path lagaya
-    let a = await fetch("songs/");
+    // Albums fetch karne ke liye sahi GitHub subfolder path
+    let a = await fetch(`/JavaScript/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -93,11 +93,11 @@ async function displayAlbums() {
             console.log(folder);
             
             try {
-                let a = await fetch(`songs/${folder}/info.json`);
+                let a = await fetch(`/JavaScript/songs/${folder}/info.json`);
                 let response = await a.json();
                 console.log(response);
                 cardcontainer.innerHTML = cardcontainer.innerHTML + ` <div class="cards" data-folder="${folder}">
-                                    <img src="songs/${folder}/cover.jpg" alt="image"
+                                    <img src="/JavaScript/songs/${folder}/cover.jpg" alt="image"
                                         class="spotify-image">
                                     <h4>${response.title}</h4>
                                     <p>${response.description}</p>
@@ -108,14 +108,14 @@ async function displayAlbums() {
                                     </svg>
                                 </div>`
             } catch(err) {
-                console.log(err);
+                console.log("JSON parse or path error: ", err);
             }
         }
     }
 }
 
 async function main() {
-    // Aapka 100% chalta hua original hamburger code
+    // Aapka original hamburger open/close code
     document.querySelector("#hamburg").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0";
     })
@@ -123,7 +123,7 @@ async function main() {
         document.querySelector(".left").style.left = "-100%";
     })
     
-    // GitHub repository folder ke mutabiq sahi starting path
+    // Initial folder load path
     songs = await getsongs("songs/cs");
     console.log(songs);
 
