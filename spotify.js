@@ -21,7 +21,7 @@ function formatToMinutesSeconds(totalSeconds) {
 
 async function getsongs(folder) {
     currfolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let a = await fetch(`JavaScript/${folder}/`);
     // console.log(a);
     let response = await a.text();
     // console.log(response);
@@ -92,7 +92,7 @@ if(e.href.includes("/songs")){
     // console.log(e.href.split("/").slice(-1)[0]);
     let folder = e.href.split("/").slice(-1)[0];
     console.log(folder);
-   let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+   let a = await fetch(`JavaScript/songs/${folder}/info.json`);
 // console.log(a);
     let response = await a.json();
     console.log(response);
