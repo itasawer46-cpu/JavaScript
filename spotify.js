@@ -6,6 +6,15 @@ let songinfo = document.querySelector(".song-info");
 let songs = [];
 let currfolder;
 let index;
+ 
+// Jab bhi naya folder banayein, bas yahan ek choti si line barha dein!
+let myAlbums = [
+    { folder: "cs", title: "Happy Hits", desc: "Hits to boost your mood and fill you" },
+    { folder: "ncs", title: "Hello Husnain Ali", desc: "songs for you" },
+    {folder:"SadSongs",title:"Sad Melodies",desc: "Songs for you "}
+    // Naya album lagana ho to yahan comma (,) laga kar likhein:
+    // { folder: "sad", title: "Sad Melodies", desc: "Heartbreaking songs" }
+];
 
 function formatToMinutesSeconds(totalSeconds) {
     if (isNaN(totalSeconds) || totalSeconds < 0) {
@@ -55,7 +64,7 @@ async function getsongs(folder) {
         </li>`;
     }
 
-    // Har gaane par click listener lagana
+    // Har gaane par click listener lagana (Sahi text extract karne ke liye)
     Array.from(document.querySelector(".song-list").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", () => {
             let musicInfoDiv = e.querySelector(".music-info div");
@@ -74,41 +83,36 @@ function playMusic(song) {
     play.src = "pause.svg";
 }
 
-// Dono albums ko dynamic render aur unka click handle karne ka function
+// Sabhi albums ko myAlbums list se dynamic render karne ka function
 async function displayAlbums() {
     let cardcontainer = document.querySelector(".card-container");
     if (!cardcontainer) return;
 
-    // HTML ke andar dono cards static set kar diye taake GitHub block na kare
-    cardcontainer.innerHTML = `
-        <div class="cards" data-folder="cs">
-            <img src="songs/cs/cover.jpg" alt="image" class="spotify-image">
-            <h4>Happy Hits</h4>
-            <p>Hits to boost your mood and fill you</p>
-            <svg width="50" height="50" viewBox="0 0 100 100" class="play-icon">
-                <circle cx="50" cy="50" r="45" fill="#28a745" />
-                <polygon points="40,30 70,50 40,70" fill="black" />
-            </svg>
-        </div>
-        <div class="cards" data-folder="ncs">
-            <img src="songs/ncs/cover.jpg" alt="image" class="spotify-image">
-            <h4>Hello Husnain Ali</h4>
-            <p>songs for you</p>
-            <svg width="50" height="50" viewBox="0 0 100 100" class="play-icon">
-                <circle cx="50" cy="50" r="45" fill="#28a745" />
-                <polygon points="40,30 70,50 40,70" fill="black" />
-            </svg>
-        </div>
-    `;
+    // Purana saara static HTML saaf kiya
+    cardcontainer.innerHTML = "";
 
-    // Jab kisi card par click ho, to us folder ke gane load honge
+    // Loop khud-ba-khud saare cards screen par bana dega
+    for (let album of myAlbums) {
+        cardcontainer.innerHTML = cardcontainer.innerHTML + `
+            <div class="cards" data-folder="${album.folder}">
+                <img src="songs/${album.folder}/cover.jpg" alt="image" class="spotify-image">
+                <h4>${album.title}</h4>
+                <p>${album.desc}</p>
+                <svg width="50" height="50" viewBox="0 0 100 100" class="play-icon">
+                    <circle cx="50" cy="50" r="45" fill="#28a745" />
+                    <polygon points="40,30 70,50 40,70" fill="black" />
+                </svg>
+            </div>`;
+    }
+
+    // Cards par click handle karne ka core logic
     Array.from(document.getElementsByClassName("cards")).forEach((e) => {
         e.addEventListener("click", async (it) => {
             let folderName = it.currentTarget.dataset.folder;
             console.log("Switching album to: songs/" + folderName);
             await getsongs(`songs/${folderName}`);
             
-            // Mobile standard view ke liye: card click par side library panel samne aa jaye
+            // Mobile standard view ke liye: card click par side panel samne aa jaye
             document.querySelector(".left").style.left = "0";
         });
     });
@@ -126,7 +130,7 @@ async function main() {
     // Pehli baar website khulne par cs folder default load hoga
     await getsongs("songs/cs");
     
-    // Albums dynamic render karein
+    // Albums ko screen par render karein
     displayAlbums();
     
     // Play/Pause button controller
@@ -140,6 +144,7 @@ async function main() {
         }
     });
     
+    // Seekbar aur time update logic
     currentsong.addEventListener("timeupdate", () => {
         document.querySelector(".song-time").innerHTML = `${formatToMinutesSeconds(currentsong.currentTime)} / ${formatToMinutesSeconds(currentsong.duration)}`;
         document.querySelector(".circle").style.left = (currentsong.currentTime / currentsong.duration) * 100 + "%";
@@ -151,6 +156,7 @@ async function main() {
         currentsong.currentTime = (currentsong.duration * percen) / 100;
     });
 
+    // Previous button logic
     document.querySelector("#previous").addEventListener("click", () => {
         let currentSongName = currentsong.src.split("/").slice(-1)[0];
         index = songs.indexOf(decodeURIComponent(currentSongName));
@@ -160,6 +166,7 @@ async function main() {
         }
     });
     
+    // Next button logic
     document.querySelector("#next").addEventListener("click", () => {
         let currentSongName = currentsong.src.split("/").slice(-1)[0];
         index = songs.indexOf(decodeURIComponent(currentSongName));
@@ -172,6 +179,7 @@ async function main() {
         }
     });
 
+    // Volume range slider control
     document.querySelector("#range").addEventListener("input", (e) => {
         let volumn = e.target.value;
         document.querySelector("#para").innerHTML = `${volumn} / 100`;
