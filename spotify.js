@@ -11,7 +11,7 @@ let index;
 let myAlbums = [
     { folder: "cs", title: "Happy Hits", desc: "Hits to boost your mood and fill you" },
     { folder: "ncs", title: "Hello Husnain Ali", desc: "songs for you" },
-    {folder:"SadSongs",title:"Sad Melodies",desc: "Songs for you "}
+    {folder:"SadSongs",title:"Sad Melodies",desc: "Heartbreaking tunes for late nights"}
     // Naya album lagana ho to yahan comma (,) laga kar likhein:
     // { folder: "sad", title: "Sad Melodies", desc: "Heartbreaking songs" }
 ];
