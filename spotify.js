@@ -4,7 +4,7 @@ let playbtn = document.querySelector(".play-btn");
 let play = document.querySelector("#play");
 let songinfo = document.querySelector(".song-info");
 let songs = [];
-let currfolder = "songs/cs";
+let currfolder;
 let index;
 
 function formatToMinutesSeconds(totalSeconds) {
@@ -20,42 +20,25 @@ function formatToMinutesSeconds(totalSeconds) {
     return `${paddedMinutes}:${paddedSeconds}`;
 }
 
-// GitHub Pages ke liye hardcoded static data taake code crash na ho
-const albumSongs = {
-    "songs/cs": ["Supreme.mp3", "Taweer.mp3", "Wavy%20copy.mp3", "Wavy.mp3"],
-    "songs/happy": ["Supreme.mp3", "Taweer.mp3"] // Agar koi doosra folder hai to uske gane yahan likhein
-};
-
+// Gane load karne ka dynamic function jo info.json se data uthayega
 async function getsongs(folder) {
     currfolder = folder;
     
-    // Agar hardcoded list maujood hai to wahan se uthaye, nahi to local backup chalaye
-    if (albumSongs[folder]) {
-        songs = albumSongs[folder];
-    } else {
-        try {
-            let a = await fetch(`${folder}/`);
-            let response = await a.text();
-            let div = document.createElement("div");
-            div.innerHTML = response;
-            let href = div.getElementsByTagName("a");
-            songs = [];
-            for (let i = 0; i < href.length; i++) {
-                const element = href[i];
-                if (element.href.endsWith(".mp3")) {
-                    songs.push(element.href.split(`${folder}/`)[1]);
-                }
-            }
-        } catch (e) {
-            // Fallback agar fetch fail ho jaye
-            songs = ["Supreme.mp3", "Taweer.mp3", "Wavy%20copy.mp3", "Wavy.mp3"];
-        }
+    try {
+        let a = await fetch(`${folder}/info.json`);
+        let response = await a.json();
+        songs = response.songs; 
+        console.log("Songs loaded successfully from:", folder, songs);
+    } catch (e) {
+        console.log("Error loading songs from JSON:", e);
+        songs = []; 
     }
     
+    // UI par gano ki list update karna
     let songUL = document.querySelector(".song-list");
     songUL.innerHTML = "";
+    
     for (const song of songs) {
-        // Name decode kiya taake %20 ki jagah space dikhe
         let decodedSong = decodeURIComponent(song);
         let li = document.createElement("li");
         songUL.appendChild(li);
@@ -72,12 +55,12 @@ async function getsongs(folder) {
         </li>`;
     }
 
-    // Aapka original click logic
+    // Har gaane par click listener lagana
     Array.from(document.querySelector(".song-list").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", () => {
             let musicInfoDiv = e.querySelector(".music-info div");
             if (musicInfoDiv) {
-                let info = musicInfoDiv.innerHTML;
+                let info = musicInfoDiv.innerHTML.trim();
                 playMusic(encodeURIComponent(info));
                 songinfo.innerHTML = info;
             }
@@ -91,11 +74,12 @@ function playMusic(song) {
     play.src = "pause.svg";
 }
 
+// Dono albums ko dynamic render aur unka click handle karne ka function
 async function displayAlbums() {
     let cardcontainer = document.querySelector(".card-container");
     if (!cardcontainer) return;
 
-    // Direct HTML render taake GitHub fetch error se website crash na ho
+    // HTML ke andar dono cards static set kar diye taake GitHub block na kare
     cardcontainer.innerHTML = `
         <div class="cards" data-folder="cs">
             <img src="songs/cs/cover.jpg" alt="image" class="spotify-image">
@@ -106,19 +90,32 @@ async function displayAlbums() {
                 <polygon points="40,30 70,50 40,70" fill="black" />
             </svg>
         </div>
+        <div class="cards" data-folder="ncs">
+            <img src="songs/ncs/cover.jpg" alt="image" class="spotify-image">
+            <h4>Hello Husnain Ali</h4>
+            <p>songs for you</p>
+            <svg width="50" height="50" viewBox="0 0 100 100" class="play-icon">
+                <circle cx="50" cy="50" r="45" fill="#28a745" />
+                <polygon points="40,30 70,50 40,70" fill="black" />
+            </svg>
+        </div>
     `;
 
-    // Cards par click event setup
+    // Jab kisi card par click ho, to us folder ke gane load honge
     Array.from(document.getElementsByClassName("cards")).forEach((e) => {
         e.addEventListener("click", async (it) => {
             let folderName = it.currentTarget.dataset.folder;
-            songs = await getsongs(`songs/${folderName}`);
+            console.log("Switching album to: songs/" + folderName);
+            await getsongs(`songs/${folderName}`);
+            
+            // Mobile standard view ke liye: card click par side library panel samne aa jaye
+            document.querySelector(".left").style.left = "0";
         });
     });
 }
 
 async function main() {
-    // Hamburger elements
+    // Hamburger Menu ke event listeners
     document.querySelector("#hamburg").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0";
     });
@@ -126,11 +123,13 @@ async function main() {
         document.querySelector(".left").style.left = "-100%";
     });
     
-    // Initial songs load
+    // Pehli baar website khulne par cs folder default load hoga
     await getsongs("songs/cs");
-
+    
+    // Albums dynamic render karein
     displayAlbums();
     
+    // Play/Pause button controller
     play.addEventListener("click", () => {
         if (currentsong.paused) {
             currentsong.play();

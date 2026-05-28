@@ -1,4 +1,10 @@
 {
-    "title":"Hello Husnain Ali",
-    "description":"songs for you "
+    "title": "Happy Hits",
+    "description": "Hits to boost your mood and fill you",
+    "songs": [
+        "Supreme.mp3",
+        "Taweer.mp3",
+        "Wavy copy.mp3",
+        "Wavy.mp3"
+    ]
 }

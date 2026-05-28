@@ -1,4 +1,15 @@
 {
-    "title":"Hello Husnain Ali",
-    "description":"songs for you "
+    "title": "Hello Husnain Ali",
+    "description": "songs for you",
+    "songs": [
+        "Aj Kal.mp3",
+        "DEEWANA.mp3",
+        "Jhol.mp3",
+        "Levels.mp3",
+        "Subhu.mp3",
+        "Supreme.mp3",
+        "Taweer.mp3",
+        "Wavy copy.mp3",
+        "Wavy.mp3"
+    ]
 }
