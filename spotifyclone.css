@@ -210,7 +210,7 @@ transform: translateY(-10px);
   gap: 10px;
 }
 .playbar{
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width:70vw;
   background-color:rgb(69, 72, 64);
